@@ -382,3 +382,26 @@ main {
     max-height: 300px;
   }
 }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-primary);
+  margin-bottom: 16px;
+  color: #222222;
+  background-color: #e5d6d6;
+  border-radius: 8px;
+}
