@@ -584,6 +584,14 @@ main {
   color: #2f2a26;
 }
 
+.product-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .crochet-tag {
   display: inline-flex;
   align-self: flex-start;
@@ -595,6 +603,24 @@ main {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.buy-button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #f2a65a, #e28c39);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(226, 140, 57, 0.22);
+}
+
+.buy-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(226, 140, 57, 0.28);
 }
 
 .contact {
