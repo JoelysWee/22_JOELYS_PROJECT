@@ -566,6 +566,24 @@ main {
   line-height: 1.7;
 }
 
+.product-specs {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 14px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.product-specs li {
+  color: #3d3936;
+  font-size: 0.96rem;
+}
+
+.product-specs span {
+  font-weight: 700;
+  color: #2f2a26;
+}
+
 .crochet-tag {
   display: inline-flex;
   align-self: flex-start;
