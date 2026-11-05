@@ -420,6 +420,7 @@ main {
   display: flex;
   align-items: center;
   gap: 32px;
+  width: 100%;
   margin: 24px auto 48px;
   padding: 24px;
   border: 1px solid rgba(170, 195, 163, 0.7);
@@ -643,8 +644,9 @@ main {
 
 /* ---------- FAQ accordion (shadcn-style) ---------- */
 .faq {
+  display: block;
   max-width: 42rem;
-  margin: 2.5rem auto;
+  margin: 2.5rem auto 0;
   padding: 0 1rem;
 }
 
