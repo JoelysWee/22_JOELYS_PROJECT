@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Sign Up/Sign In - InfinityCarrot</title>
+  <title>Sign In - InfinityCarrot</title>
 </head>
 <body>
   <header class="site-header">
@@ -40,44 +40,34 @@
     <section class="signup">
       <div class="signup-card">
         <div class="signup-header">
-          <h1>Create an account</h1>
-          <p>Enter your information to create an account</p>
+          <h1>Login to your account</h1>
+          <p>Enter your email below to login to your account</p>
         </div>
 
         <form class="signup-form" action="#" method="post">
           <div class="field">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" placeholder="Jane Tan" required>
-          </div>
-
-          <div class="field">
             <label for="email">Email</label>
             <input id="email" name="email" type="email" placeholder="you@example.com" required>
-            <small>We'll use this to contact you. We will not share your email with anyone else.</small>
           </div>
 
           <div class="field">
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password" minlength="8" required>
-            <small>Must be at least 8 characters long.</small>
+            <div class="field-row">
+              <label for="password">Password</label>
+              <a href="forgot-password.html" class="forgot-link">Forgot your password?</a>
+            </div>
+            <input id="password" name="password" type="password" required>
           </div>
 
-          <div class="field">
-            <label for="confirm-password">Confirm Password</label>
-            <input id="confirm-password" name="confirm-password" type="password" minlength="8" required>
-            <small>Please confirm your password.</small>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Create Account</button>
+          <button type="submit" class="btn btn-primary">Login</button>
 
           <button type="button" class="btn btn-outline">
             <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
               <path fill="currentColor" d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
             </svg>
-            Sign up with Google
+            Login with Google
           </button>
 
-          <p class="signup-footer">Already have an account? <a href="signin.html">Sign in</a></p>
+          <p class="signup-footer">Don't have an account? <a href="signup.html">Sign up</a></p>
         </form>
       </div>
     </section>
