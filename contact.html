@@ -49,66 +49,68 @@
   </header>
 
   <main>
-    <section class="contact">
-    
-      <div class="contact-card">
-        <h2>Our Contact Information</h2>
-        <p>Email: contact@infinitycarrot.com</p>
-        <p>Phone: +65 1234 5678</p>
+    <section class="contact-layout" aria-labelledby="contact-title">
+      <div class="contact-visual">
+        <img src="img/Crochet.jpg" alt="Handmade crochet pieces and cozy textures">
+      </div>
+
+      <div class="contact-panel">
+        <p class="eyebrow">Say hello</p>
+        <h1 id="contact-title">Our Contact Information</h1>
+        <p class="contact-copy">We would love to hear from you about custom orders, product enquiries, and collaborations.</p>
+
+        <ul class="contact-details">
+          <li><span>Email</span><a href="mailto:contact@infinitycarrot.com">contact@infinitycarrot.com</a></li>
+          <li><span>Phone</span><a href="tel:+6512345678">+65 1234 5678</a></li>
+          <li><span>Hours</span>Mon - Sat, 9:00am - 6:00pm</li>
+        </ul>
       </div>
     </section>
-    <main>
 
-  <!-- FAQ -->
-  <section class="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title">Frequently Asked Questions</h2>
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
 
-    <div class="accordion">
-      <!-- Same "name" on every <details> = only one open at a time -->
-      <details class="accordion-item" name="faq" open>
-        <summary class="accordion-trigger">
-          <span>How long does shipping take?</span>
-          <svg class="accordion-chevron" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </summary>
-        <div class="accordion-content">
-          <p>Orders usually ship within 3&ndash;5 working days. Delivery within Singapore takes 1&ndash;3 days after that.</p>
-        </div>
-      </details>
+      <div class="accordion">
+        <details class="accordion-item" name="faq" open>
+          <summary class="accordion-trigger">
+            <span>How long does shipping take?</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="accordion-content">
+            <p>Orders usually ship within 3&ndash;5 working days. Delivery within Singapore takes 1&ndash;3 days after that.</p>
+          </div>
+        </details>
 
-      <details class="accordion-item" name="faq">
-        <summary class="accordion-trigger">
-          <span>Can I request a custom crochet piece?</span>
-          <svg class="accordion-chevron" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </summary>
-        <div class="accordion-content">
-          <p>Yes! Email us with your idea, preferred colours and size, and we'll send you a quote.</p>
-        </div>
-      </details>
+        <details class="accordion-item" name="faq">
+          <summary class="accordion-trigger">
+            <span>Can I request a custom crochet piece?</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="accordion-content">
+            <p>Yes! Email us with your idea, preferred colours and size, and we'll send you a quote.</p>
+          </div>
+        </details>
 
-      <details class="accordion-item" name="faq">
-        <summary class="accordion-trigger">
-          <span>What is your return policy?</span>
-          <svg class="accordion-chevron" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-            <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </summary>
-        <div class="accordion-content">
-          <p>Unused art materials can be returned within 14 days. Handmade crochet pieces are final sale unless damaged.</p>
-        </div>
-      </details>
-    </div>
-  </section>
-
-  <br>
-  </main>
-    
+        <details class="accordion-item" name="faq">
+          <summary class="accordion-trigger">
+            <span>What is your return policy?</span>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="accordion-content">
+            <p>Unused art materials can be returned within 14 days. Handmade crochet pieces are final sale unless damaged.</p>
+          </div>
+        </details>
+      </div>
+    </section>
   </main>
 </body>
 
