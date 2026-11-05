@@ -405,3 +405,72 @@ main {
   background-color: #e5d6d6;
   border-radius: 8px;
 }
+
+/* ---------- FAQ accordion (shadcn-style) ---------- */
+.faq {
+  max-width: 42rem;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.faq h2 {
+  margin-bottom: 1rem;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;            /* hide default marker (Firefox/Chrome) */
+}
+
+.accordion-trigger::-webkit-details-marker {
+  display: none;               /* hide default marker (Safari) */
+}
+
+.accordion-trigger:hover > span {
+  text-decoration: underline;
+}
+
+.accordion-trigger:focus-visible {
+  outline: 2px solid #999;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.accordion-chevron {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: #737373;
+  transition: transform 0.2s ease;
+}
+
+.accordion-item[open] > .accordion-trigger .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #525252;
+  animation: accordion-down 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
