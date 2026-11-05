@@ -609,3 +609,109 @@ main {
 .forgot-link:hover {
   text-decoration: underline;
 }
+
+
+/* ---------- About dropdown ---------- */
+
+.about-menu {
+  position: relative;
+}
+
+.about-trigger {
+  display: block;
+  padding: 8px 20px;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+}
+
+.about-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.about-trigger::after {
+  content: " \25BE";
+}
+
+.about-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  min-width: 180px;
+  padding: 4px 0;
+  border: 1px solid var(--color-primary);
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.about-dropdown li {
+  margin-right: 0;
+}
+
+.nav-links .about-dropdown a {
+  padding: 10px 16px;
+  border: 0;
+  white-space: nowrap;
+}
+
+.nav-links .about-dropdown a:hover {
+  background-color: #fff8cc;
+}
+
+/* ---------- Products dropdown ---------- */
+
+.products-menu {
+  position: relative;
+}
+
+.products-trigger {
+  display: block;
+  padding: 8px 20px;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  list-style: none;
+}
+
+.products-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.products-trigger::after {
+  content: " \25BE";
+}
+
+.products-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  min-width: 180px;
+  padding: 4px 0;
+  border: 1px solid var(--color-primary);
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.products-dropdown li {
+  margin-right: 0;
+}
+
+.nav-links .products-dropdown a {
+  padding: 10px 16px;
+  border: 0;
+  white-space: nowrap;
+}
+
+.nav-links .products-dropdown a:hover {
+  background-color: #fff8cc;
+}
+
+.nav-links a:hover,
+.nav-actions a:hover,
+.products-trigger:hover {
+  color: var(--color-primary);
+}
+
+.nav-actions li:last-child {
+  margin-right: 0;
+}
