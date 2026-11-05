@@ -372,6 +372,30 @@ main {
   font-size: 15px;
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-primary);
+  margin-bottom: 16px;
+  color: #222222;
+  background-color: #e5d6d6;
+  border-radius: 8px;
+}
+
+
 @media (max-width: 700px) {
   .values-content {
     flex-direction: column;
@@ -716,11 +740,3 @@ main {
   margin-right: 0;
 }
 
-.mission {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 32px;
-  flex-wrap: wrap;
-}
