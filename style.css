@@ -997,6 +997,62 @@ main {
   margin-right: 0;
 }
 
+/* ---------- Navigation icons ---------- */
+.main-nav a::before,
+.main-nav summary::before {
+  display: inline-block;
+  margin-right: 0.45em;
+  font-family: "Segoe UI Emoji", sans-serif;
+}
+
+.main-nav a[href="index.html"]::before {
+  content: "\1F3E0";
+}
+
+.main-nav .about-trigger::before {
+  content: "\1F4D6";
+}
+
+.main-nav a[href="about.html"]::before {
+  content: "\1F465";
+}
+
+.main-nav a[href="mission.html"]::before {
+  content: "\1F3AF";
+}
+
+.main-nav a[href="values.html"]::before {
+  content: "\1F49A";
+}
+
+.main-nav .products-trigger::before {
+  content: "\1F6CD";
+}
+
+.main-nav a[href="crochet.html"]::before {
+  content: "\1F9F6";
+}
+
+.main-nav a[href="artmaterials.html"]::before {
+  content: "\1F3A8";
+}
+
+.main-nav a[href="products.html"]::before {
+  content: "\1F4E6";
+}
+
+.main-nav a[href="contact.html"]::before {
+  content: "\2709";
+}
+
+.main-nav a[aria-label="Search"]::before {
+  content: "\1F50D";
+}
+
+.main-nav a[href="signin.html"]::before {
+  content: "\1F464";
+}
+
 /* ---------- Home Menu ---------- */
 .home-menu {
   position: relative;
