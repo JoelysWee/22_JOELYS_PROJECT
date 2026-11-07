@@ -494,34 +494,34 @@ main {
   font-weight: 600;
 }
 
-.crochet {
+.crochet_art {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.crochet-intro {
+.crochet_art-intro {
   margin-bottom: 28px;
   text-align: center;
 }
 
-.crochet-intro h1 {
+.crochet_art-intro h1 {
   margin-bottom: 12px;
 }
 
-.crochet-intro p:last-child {
+.crochet_art-intro p:last-child {
   max-width: 760px;
   margin: 0 auto;
   line-height: 1.7;
   color: #4c4a49;
 }
 
-.crochet-gallery {
+.crochet_art-gallery {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.crochet-item {
+.crochet_art-item {
   display: flex;
   align-items: center;
   gap: 28px;
@@ -532,23 +532,23 @@ main {
   box-shadow: 0 14px 35px rgba(79, 58, 45, 0.06);
 }
 
-.crochet-item:nth-child(even) {
+.crochet_art-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.crochet-image {
+.crochet_art-image {
   flex: 0 0 42%;
   overflow: hidden;
   border-radius: 16px;
 }
 
-.crochet-image img {
+.crochet_art-image img {
   height: 300px;
   width: 100%;
   object-fit: cover;
 }
 
-.crochet-copy {
+.crochet_art-copy {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -556,12 +556,12 @@ main {
   gap: 12px;
 }
 
-.crochet-copy h2 {
+.crochet_art-copy h2 {
   font-size: clamp(1.5rem, 2vw, 2.2rem);
   color: #2f2a26;
 }
 
-.crochet-copy p {
+.crochet_art-copy p {
   color: #524d48;
   line-height: 1.7;
 }
