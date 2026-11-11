@@ -121,6 +121,28 @@
       <li><a href="https://www.instagram.com/InfinityCarrot" target="_blank" rel="noopener noreferrer">Instagram</a></li>
       <li><a href="https://www.twitter.com/InfinityCarrot" target="_blank" rel="noopener noreferrer">Twitter</a></li>
     </ul>
+  </footer>
+
+  <script>
+    const navigationDropdowns = document.querySelectorAll('.main-nav details[name="site-navigation"]');
+
+    navigationDropdowns.forEach((dropdown) => {
+      dropdown.addEventListener('pointerenter', (event) => {
+        if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
+
+        navigationDropdowns.forEach((otherDropdown) => {
+          if (otherDropdown !== dropdown) otherDropdown.open = false;
+        });
+        dropdown.open = true;
+      });
+
+      dropdown.addEventListener('pointerleave', (event) => {
+        if (event.pointerType === 'mouse' || event.pointerType === 'pen') {
+          dropdown.open = false;
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
