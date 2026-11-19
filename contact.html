@@ -42,7 +42,13 @@
       </ul>
 
       <ul class="nav-actions">
-        <li><a href="" aria-label="Search">Search</a></li>
+        <li class="search-menu">
+          <a class="search-trigger" href="#site-search" aria-label="Search">Search</a>
+          <form class="search-box" id="site-search" role="search" action="products.html" method="get">
+            <input type="search" name="q" placeholder="Search the site" aria-label="Search the site">
+            <button type="submit">Go</button>
+          </form>
+        </li>
         <li><a href="signin.html">Sign in</a></li>
       </ul>
     </nav>
