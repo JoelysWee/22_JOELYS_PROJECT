@@ -39,13 +39,6 @@
       </ul>
 
       <ul class="nav-actions">
-        <li class="search-menu">
-          <a class="search-trigger" href="#site-search" aria-label="Search">Search</a>
-          <form class="search-box" id="site-search" role="search" action="products.html" method="get">
-            <input type="search" name="q" placeholder="Search the site" aria-label="Search the site">
-            <button type="submit">Go</button>
-          </form>
-        </li>
         <li><a href="signin.html">Sign in</a></li>
       </ul>
     </nav>
@@ -87,5 +80,25 @@
       </div>
     </section>
   </main>
+  <script>
+    const navigationDropdowns = document.querySelectorAll('.main-nav details[name="site-navigation"]');
+
+    navigationDropdowns.forEach((dropdown) => {
+      dropdown.addEventListener('pointerenter', (event) => {
+        if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
+
+        navigationDropdowns.forEach((otherDropdown) => {
+          if (otherDropdown !== dropdown) otherDropdown.open = false;
+        });
+        dropdown.open = true;
+      });
+
+      dropdown.addEventListener('pointerleave', (event) => {
+        if (event.pointerType === 'mouse' || event.pointerType === 'pen') {
+          dropdown.open = false;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
