@@ -567,6 +567,121 @@ main {
   font-weight: 600;
 }
 
+.contact-form-section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(0, 2fr);
+  gap: 28px;
+  padding: 24px;
+  border: 1px solid rgba(170, 195, 163, 0.75);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.contact-form-heading {
+  padding: 8px 4px;
+}
+
+.contact-form-heading h2 {
+  margin-bottom: 10px;
+  color: #2f2a26;
+}
+
+.contact-form-heading p:last-child {
+  color: #584f49;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-row-full {
+  grid-column: 1 / -1;
+}
+
+.form-row label {
+  color: #403934;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-row label span {
+  color: #7c6f66;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  border: 1px solid rgba(170, 195, 163, 0.95);
+  border-radius: 10px;
+  background: #ffffff;
+  color: #403934;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-row input,
+.form-row select {
+  height: 46px;
+  padding: 0 13px;
+}
+
+.form-row textarea {
+  min-height: 118px;
+  resize: vertical;
+  padding: 12px 13px;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: #6f8c67;
+  box-shadow: 0 0 0 3px rgba(170, 195, 163, 0.32);
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.form-actions button {
+  min-width: 145px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  background: #2d5d42;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.form-actions button:hover {
+  background: #244d37;
+  transform: translateY(-1px);
+}
+
+.form-status {
+  color: #35563f;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .business-location {
   grid-column: 1 / -1;
   width: 100%;
@@ -765,6 +880,18 @@ main {
   .contact-layout {
     grid-template-columns: 1fr;
     padding: 18px;
+  }
+
+  .contact-form-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row-full {
+    grid-column: auto;
   }
 
   .crochet-image {
