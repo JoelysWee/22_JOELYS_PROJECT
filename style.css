@@ -1233,6 +1233,8 @@ main {
   font-size: 1.8rem;
 }
 
+
+
 @media (max-width: 700px) {
   .story-feature,
   .story-feature-reverse {
@@ -1274,3 +1276,4 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
