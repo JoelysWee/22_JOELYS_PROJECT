@@ -423,19 +423,21 @@ main {
   align-items: start;
   gap: 32px;
   width: 100%;
+  max-width: 1240px;
   margin: 24px auto 48px;
-  padding: 24px;
+  padding: 28px;
   border: 1px solid rgba(170, 195, 163, 0.7);
   border-radius: 24px;
-  background: linear-gradient(135deg, #fef8f3 0%, #f5efe7 100%);
-  box-shadow: 0 18px 45px rgba(82, 75, 60, 0.08);
+  background: linear-gradient(135deg, #fffdf2 0%, #fff7c9 100%);
+  box-shadow: 0 18px 45px rgba(82, 75, 60, 0.12);
 }
 
 .contact-visual {
-  min-height: 340px;
+  min-height: 500px;
   height: 100%;
   overflow: hidden;
   border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(82, 75, 60, 0.12);
 }
 
 .contact-visual img {
@@ -448,7 +450,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 12px 8px;
+  padding: 8px 8px 16px;
 }
 
 .contact-content {
@@ -458,6 +460,7 @@ main {
 .contact-panel h1 {
   margin-bottom: 12px;
   color: #2f2a26;
+  font-size: clamp(28px, 3vw, 38px);
 }
 
 .contact-copy {
@@ -470,19 +473,18 @@ main {
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  width: fit-content;
-  min-width: 240px;
+  gap: 10px;
+  width: 100%;
 }
 
 .contact-details li {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border: 1px solid rgba(170, 195, 163, 0.8);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.82);
   color: #403934;
 }
 
@@ -502,7 +504,9 @@ main {
 .business-location {
   grid-column: 1 / -1;
   width: 100%;
-  margin: 8px auto 0;
+  margin: 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(170, 195, 163, 0.75);
   text-align: center;
 }
 
@@ -512,7 +516,7 @@ main {
 }
 
 .business-location address {
-  margin-bottom: 20px;
+  margin: 8px 0 16px;
   color: #584f49;
   font-style: normal;
   line-height: 1.6;
@@ -522,14 +526,14 @@ main {
   width: 100%;
   overflow: hidden;
   border: 1px solid var(--color-primary);
-  border-radius: 18px;
+  border-radius: 16px;
   background: #f5efe7;
 }
 
 .map-container iframe {
   display: block;
   width: 100%;
-  height: 320px;
+  height: 300px;
   border: 0;
 }
 
@@ -732,9 +736,12 @@ main {
 /* ---------- FAQ accordion (shadcn-style) ---------- */
 .faq {
   display: block;
-  max-width: 42rem;
-  margin: 2.5rem auto 0;
-  padding: 0 1rem;
+  max-width: none;
+  margin: 18px 0 0;
+  padding: 18px 20px 8px;
+  border: 1px solid rgba(170, 195, 163, 0.75);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .faq h2 {
