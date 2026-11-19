@@ -159,7 +159,8 @@ img {
 
 .nav-links a:hover,
 .nav-actions a:hover,
-.products-trigger:hover {
+.products-trigger:hover,
+.about-trigger:hover {
   color: var(--color-primary);
 }
 
@@ -417,8 +418,9 @@ main {
 }
 
 .contact-layout {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(280px, 46%) minmax(0, 1fr);
+  align-items: start;
   gap: 32px;
   width: 100%;
   margin: 24px auto 48px;
@@ -430,8 +432,8 @@ main {
 }
 
 .contact-visual {
-  flex: 0 0 46%;
   min-height: 340px;
+  height: 100%;
   overflow: hidden;
   border-radius: 18px;
 }
@@ -443,11 +445,14 @@ main {
 }
 
 .contact-panel {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 12px 8px;
+}
+
+.contact-content {
+  min-width: 0;
 }
 
 .contact-panel h1 {
@@ -492,6 +497,40 @@ main {
 .contact-details a {
   color: #2d5d42;
   font-weight: 600;
+}
+
+.business-location {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 8px auto 0;
+  text-align: center;
+}
+
+.business-location h2 {
+  margin-bottom: 8px;
+  color: #2f2a26;
+}
+
+.business-location address {
+  margin-bottom: 20px;
+  color: #584f49;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.map-container {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+  border-radius: 18px;
+  background: #f5efe7;
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
 }
 
 .crochet_art {
@@ -649,19 +688,23 @@ main {
 /* ---------- FAQ accordion (shadcn-style) ---------- */
 
 @media (max-width: 700px) {
-  .contact-layout,
   .crochet-item {
     flex-direction: column;
   }
 
   .contact-layout {
+    grid-template-columns: 1fr;
     padding: 18px;
   }
 
-  .contact-visual,
   .crochet-image {
     width: 100%;
     flex-basis: auto;
+  }
+
+  .contact-visual {
+    width: 100%;
+    min-height: 260px;
   }
 
   .crochet-copy {
