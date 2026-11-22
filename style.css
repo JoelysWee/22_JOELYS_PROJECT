@@ -984,6 +984,12 @@ main {
   box-shadow: 0 12px 24px rgba(226, 140, 57, 0.28);
 }
 
+.cart-action-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .inline-cart-quantity {
   display: inline-flex;
   align-items: center;
@@ -992,10 +998,13 @@ main {
   border-radius: 4px;
   background: #ffffff;
   color: #222222;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.inline-cart-quantity[hidden] {
-  display: none;
+.inline-cart-quantity.is-visible {
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .inline-cart-quantity button {

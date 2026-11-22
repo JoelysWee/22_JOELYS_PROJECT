@@ -75,12 +75,19 @@ function renderInlineQuantities() {
   document.querySelectorAll('.add-to-cart').forEach((button) => {
     const productId = button.dataset.productId;
     const product = products.get(productId);
-    let control = button.nextElementSibling;
+    let actionGroup = button.parentElement;
+    if (!actionGroup.classList.contains('cart-action-group')) {
+      actionGroup = document.createElement('div');
+      actionGroup.className = 'cart-action-group';
+      button.parentElement.insertBefore(actionGroup, button);
+      actionGroup.append(button);
+    }
 
-    if (!control || !control.classList.contains('inline-cart-quantity')) {
+    let control = actionGroup.querySelector('.inline-cart-quantity');
+
+    if (!control) {
       control = document.createElement('div');
       control.className = 'inline-cart-quantity';
-      control.hidden = true;
       control.setAttribute('role', 'group');
       control.setAttribute('aria-label', `${product.name} quantity`);
 
@@ -101,11 +108,12 @@ function renderInlineQuantities() {
       increment.addEventListener('click', () => changeProductQuantity(productId, 1));
 
       control.append(decrement, count, increment);
-      button.insertAdjacentElement('afterend', control);
+      actionGroup.insertBefore(control, button);
     }
 
     const item = cart.find((cartItem) => cartItem.id === productId);
-    control.hidden = !item;
+    control.classList.toggle('is-visible', Boolean(item));
+    control.setAttribute('aria-hidden', String(!item));
     if (item) control.querySelector('.inline-cart-count').textContent = item.quantity;
   });
 }
