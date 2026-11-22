@@ -51,6 +51,65 @@ try {
   cartStatus.textContent = 'Your saved cart could not be loaded. You can still add items during this visit.';
 }
 
+function changeProductQuantity(productId, amount) {
+  const product = products.get(productId);
+  const existingItem = cart.find((item) => item.id === productId);
+  if (existingItem) {
+    existingItem.quantity += amount;
+    if (existingItem.quantity < 1) {
+      cart = cart.filter((item) => item.id !== productId);
+    }
+  } else if (amount > 0) {
+    cart.push({ id: productId, ...product, quantity: amount });
+  }
+
+  const saved = saveCart();
+  renderCart();
+  const item = cart.find((cartItem) => cartItem.id === productId);
+  cartStatus.textContent = item
+    ? `${product.name} quantity updated${saved ? '.' : ' for this visit, but could not be saved in this browser.'}`
+    : `${product.name} removed from your cart${saved ? '.' : ' for this visit, but the cart could not be saved in this browser.'}`;
+}
+
+function renderInlineQuantities() {
+  document.querySelectorAll('.add-to-cart').forEach((button) => {
+    const productId = button.dataset.productId;
+    const product = products.get(productId);
+    let control = button.nextElementSibling;
+
+    if (!control || !control.classList.contains('inline-cart-quantity')) {
+      control = document.createElement('div');
+      control.className = 'inline-cart-quantity';
+      control.hidden = true;
+      control.setAttribute('role', 'group');
+      control.setAttribute('aria-label', `${product.name} quantity`);
+
+      const decrement = document.createElement('button');
+      decrement.type = 'button';
+      decrement.textContent = '-';
+      decrement.setAttribute('aria-label', `Decrease ${product.name} quantity`);
+      decrement.addEventListener('click', () => changeProductQuantity(productId, -1));
+
+      const count = document.createElement('output');
+      count.className = 'inline-cart-count';
+      count.setAttribute('aria-live', 'polite');
+
+      const increment = document.createElement('button');
+      increment.type = 'button';
+      increment.textContent = '+';
+      increment.setAttribute('aria-label', `Increase ${product.name} quantity`);
+      increment.addEventListener('click', () => changeProductQuantity(productId, 1));
+
+      control.append(decrement, count, increment);
+      button.insertAdjacentElement('afterend', control);
+    }
+
+    const item = cart.find((cartItem) => cartItem.id === productId);
+    control.hidden = !item;
+    if (item) control.querySelector('.inline-cart-count').textContent = item.quantity;
+  });
+}
+
 function renderCart() {
   cartItemsElement.replaceChildren();
   const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -123,22 +182,15 @@ function renderCart() {
   });
 
   cartSubtotal.textContent = `$${(subtotal / 100).toFixed(2)}`;
+  renderInlineQuantities();
 }
 
 document.querySelectorAll('.add-to-cart').forEach((button) => {
   button.addEventListener('click', () => {
     const product = products.get(button.dataset.productId);
     const existingItem = cart.find((item) => item.id === button.dataset.productId);
-    if (existingItem) {
-      existingItem.quantity += 1;
-    } else {
-      cart.push({
-        id: button.dataset.productId,
-        name: product.name,
-        priceCents: product.priceCents,
-        quantity: 1
-      });
-    }
+    if (existingItem) existingItem.quantity += 1;
+    else cart.push({ id: button.dataset.productId, ...product, quantity: 1 });
     const saved = saveCart();
     renderCart();
     cartStatus.textContent = saved

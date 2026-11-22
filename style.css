@@ -984,6 +984,42 @@ main {
   box-shadow: 0 12px 24px rgba(226, 140, 57, 0.28);
 }
 
+.inline-cart-quantity {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #222222;
+}
+
+.inline-cart-quantity[hidden] {
+  display: none;
+}
+
+.inline-cart-quantity button {
+  width: 36px;
+  height: 38px;
+  border: 0;
+  background: #ffffff;
+  color: inherit;
+  font: inherit;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.inline-cart-quantity button:hover,
+.inline-cart-quantity button:focus-visible {
+  background: #f2f6ec;
+}
+
+.inline-cart-count {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
