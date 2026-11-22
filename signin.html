@@ -39,10 +39,35 @@
       </ul>
 
       <ul class="nav-actions">
+        <li>
+          <button type="button" class="cart-button" id="cart-open" aria-label="Cart, 0 items" aria-haspopup="dialog">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L21.5 8H6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <circle cx="10" cy="20" r="1.5" fill="currentColor"/>
+              <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+            </svg>
+            <span>Cart</span>
+            <span class="cart-count" id="cart-count" aria-hidden="true">0</span>
+          </button>
+        </li>
         <li><a href="signin.html">Sign in</a></li>
       </ul>
     </nav>
   </header>
+
+  <p class="visually-hidden" id="cart-status" aria-live="polite"></p>
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-heading">
+    <div class="cart-dialog-header">
+      <h2 id="cart-heading">Your Cart</h2>
+      <button type="button" class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <p class="cart-empty" id="cart-empty">Your cart is empty.</p>
+    <ul class="cart-items" id="cart-items"></ul>
+    <div class="cart-summary">
+      <span>Subtotal</span>
+      <strong id="cart-subtotal">$0.00</strong>
+    </div>
+  </dialog>
 
   <main>
     <section class="signup">
@@ -100,5 +125,6 @@
       });
     });
   </script>
+  <script src="cart.js"></script>
 </body>
 </html>
